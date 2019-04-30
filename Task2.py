@@ -28,7 +28,7 @@ def findMostTimeSpent(callList):
     longestCallTimes =  ['' , 0]
     for call in callList:
         callTimes[call[0]] = callTimes[call[0]] + int(call[3]) if call[0] in callTimes else int(call[3])
-        callTimes[call[1]] = callTimes[call[0]] + int(call[3]) if call[1] in callTimes else int(call[3])
+        callTimes[call[1]] = callTimes[call[1]] + int(call[3]) if call[1] in callTimes else int(call[3])
         if callTimes[call[0]] > longestCallTimes[1]: longestCallTimes = [call[0], callTimes[call[0]]]
         if callTimes[call[1]] > longestCallTimes[1]: longestCallTimes = [call[1], callTimes[call[1]]]  
     return longestCallTimes

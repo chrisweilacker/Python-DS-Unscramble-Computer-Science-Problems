@@ -43,19 +43,19 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
-numberList = []
+codeSet = set()
+totalNumbers = 0
 numBangladoreFLCalled = 0
 
 for call in calls:
   if call[0][0:5:]== "(080)":
+    totalNumbers+=1
     if call[1][0:5:] == "(080)": numBangladoreFLCalled += 1
       
-    if call[1][0] == "(": numberList.append(call[1][1:call[1].find(')'):])
-    if call[1][0:3:] == "140" : numberList.append("140")
-    if call[1][5] == " ": numberList.append(call[1][0:4:])
+    if call[1][0] == "(": codeSet.add(call[1][1:call[1].find(')'):])
+    if call[1][0:3:] == "140" : codeSet.add("140")
+    if call[1][5] == " ": codeSet.add(call[1][0:4:])
     
-#Remove Duplicates
-codeSet = set(numberList)
 #Convert back to List and Sort
 sortedCodes = list(codeSet)
 sortedCodes.sort()
@@ -69,6 +69,6 @@ percentBFL = round( (numBangladoreFLCalled/len(numberList) ) * 100, 2)
 print(f"{percentBFL} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
 
 '''
-I believe this code is O(6n + n log n) or approximately O(n).  It will go through and check each call if it was made from bangladore it would make 
+I believe this code is O(6n + n log n) or approximately O(n log n).  It will go through and check each call if it was made from bangladore it would make 
 4 calls.  THen we have conversion to a set and back to a list to be sorted. The sort algorithm is n log n on the worst case.
 '''

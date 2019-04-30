@@ -17,8 +17,8 @@ pull out the time and update the calls to find the greatest.
 
 Task3
 '''
-I believe this code is O(6n + n log n) or approximately O(n).  It will go through and check each call if it was made from bangladore it would make 
-4 calls.  THen we have conversion to a set and back to a list to be sorted. The sort algorithm is n log n on the worst case.
+I believe this code is O(6n + n log n) or approximately O(n log n).  It will go through and check each call if it was made from bangladore it would make 
+4 calls.  Then we have conversion to a set and back to a list to be sorted. The sort algorithm is n log n on the worst case.
 '''
 
 Task4
