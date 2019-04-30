@@ -1,0 +1,29 @@
+Task 0
+'''
+This is O(7) which approximates as O(1) as we just go to the first and last entry and get the information and the number of
+entries doesnt change the algorithm time.
+'''
+
+Task1
+'''
+This algorithm worst case time seems to be O(2n + 1) which approximates to O(n) as it only must make two calls per item in the calls list.
+'''
+
+Task2
+'''
+This algorithm worst case time is O(4n) or approximately O(n) as it must go through each individual call to 
+pull out the time and update the calls to find the greatest.
+'''
+
+Task3
+'''
+I believe this code is O(6n + n log n) or approximately O(n).  It will go through and check each call if it was made from bangladore it would make 
+4 calls.  THen we have conversion to a set and back to a list to be sorted. The sort algorithm is n log n on the worst case.
+'''
+
+Task4
+"""
+This algorithm would be O(2(n)^2 + n + n log n) which approximates to O(n^2) if we 
+consider that going through the text list is the same as going through the calls list and the calls are our actual input
+otherwise we would need multiple variables for input.
+"""
