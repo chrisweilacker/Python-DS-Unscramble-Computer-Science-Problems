@@ -27,6 +27,7 @@ The list of numbers should be print out one per line in lexicographic order with
 input: calls and texts
 output: sorted list of numbers that may be telemarketers
 """
+
 setOfTelemarketers = set()
 for call in calls:
     if call[0] not in setOfTelemarketers:
